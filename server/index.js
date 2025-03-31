@@ -38,7 +38,7 @@ app.use(cors({
     origin: [
         'https://lechugarll.github.io', // GitHub Pages
         'http://localhost:8080',        // Desarrollo local
-        'https://gcb-backend-b4f7ffamekdresdb.canadacentral-01.azurewebsites.net/' // Agrega aquí otros dominios si es necesario
+        'https://gcb-backend-b4f7ffamekdresdb.canadacentral-01.azurewebsites.net' // Agrega aquí otros dominios si es necesario
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
