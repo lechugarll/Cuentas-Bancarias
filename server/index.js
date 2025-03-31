@@ -35,9 +35,7 @@ app.use(helmet({
     crossOriginEmbedderPolicy: true,
 }));
 app.use(cors({
-    origin: [
-        'https://lechugarll.github.io', // GitHub Pages
-        'http://localhost:8080',        // Desarrollo local
+    origin: [   // Desarrollo local
         'https://cuentas-bancarias.onrender.com/api' // Agrega aquí otros dominios si es necesario
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
