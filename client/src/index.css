@@ -1,0 +1,182 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+
+/* Botón Editar */
+.btn-info {
+  background-color: #2e5fe7; /* Azul claro */
+  color: #ffffff;
+  border: none;
+}
+.btn-info:hover {
+  background-color: #170872; /* Azul más oscuro */
+  color: #ffffff;
+}
+
+/* Botón Eliminar */
+.btn-danger {
+  background-color: #dc3545; /* Rojo */
+  color: #ffffff;
+  border: none;
+}
+.btn-danger:hover {
+  background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Formularios EDITAR Y AGREGAR - LABEL*/
+label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #000000; /* Gris oscuro */
+}
+
+/* Tablas */
+.table {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  color: #1987f5;
+}
+.table th {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #495057; /* Gris oscuro */
+}
+.table td {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* Navbar */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #ffffff; /* Fondo blanco */
+  border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #213547; /* Azul oscuro */
+}
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #007bff; /* Azul */
+}
+.navbar-nav .nav-link:hover {
+  color: #0056b3; /* Azul más oscuro */
+}
+
+/* Alertas */
+.alert {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+/* Ajustes para el contenido principal */
+main {
+  margin-top: 4em; /* Espacio para evitar que el contenido quede debajo de la navbar */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #212529;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #0056b3;
+  }
+}
+
+/* Estilos para el encabezado dinámico de la tabla */
+.table-header {
+  margin-bottom: 1.5em; /* Espacio debajo del encabezado */
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #213547;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  /* Usando clases de Bootstrap */
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa; /* Fondo claro */
+  border-bottom: 1px solid #e0e0e0; /* Línea inferior */
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000; /* Negro */
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.navbar-toggler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #6c757d; /* Gris oscuro */
+  border-radius: 50%;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #007bff; /* Azul */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #0056b3; /* Azul más oscuro */
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Sombra */
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #212529; /* Gris oscuro */
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Fondo claro al pasar el cursor */
+  color: #000000; /* Negro */
+}
