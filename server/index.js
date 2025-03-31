@@ -34,14 +34,17 @@ app.use(helmet({
     },
     crossOriginEmbedderPolicy: true,
 }));
-app.use(cors({
-    origin: [   // Desarrollo local
-        'https://cuentas-bancarias.onrender.com/api' // Agrega aquí otros dominios si es necesario
+
+const corsOptions = {
+    origin: [
+        'https://cuentas-bancarias.onrender.com', // URL de tu backend en Render
+        'https://lechugarll.github.io' // URL de tu frontend en GitHub Pages
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-}));
-app.use(express.json());
+};
+
+app.use(cors(corsOptions));
 
 // Ruta GET para la raíz
 app.get('/', (req, res) => {
@@ -120,7 +123,7 @@ app.put(
         try {
             const pool = await sql.connect(dbConfig);
             const result = await pool.request()
-                .input('id_usuario', sql.VarChar, id_usuario) // Parámetro para el ID del usuario
+                .input('id_usuario', sql.VarChar, id) // Parámetro para el ID del usuario
                 .input('nombre_usuario', sql.VarChar, nombre_usuario) // Parámetro para el nuevo nombre
                 .query('UPDATE Usuario SET nombre_usuario = @nombre_usuario WHERE id_usuario = @id_usuario'); // Consulta SQL
 
