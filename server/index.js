@@ -34,7 +34,15 @@ app.use(helmet({
     },
     crossOriginEmbedderPolicy: true,
 }));
-app.use(cors());
+app.use(cors({
+    origin: [
+        'https://lechugarll.github.io', // GitHub Pages
+        'http://localhost:8080',        // Desarrollo local
+        'https://gcb-backend-b4f7ffamekdresdb.canadacentral-01.azurewebsites.net/' // Agrega aquí otros dominios si es necesario
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(express.json());
 
 // Ruta GET para la raíz
@@ -162,4 +170,5 @@ app.use((err, req, res, next) => {
 // Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log('CORS habilitado para GitHub Pages y localhost');
 });

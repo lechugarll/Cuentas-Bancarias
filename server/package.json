@@ -1,0 +1,16 @@
+{
+  "name": "gcb-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "cors": "^2.8.5",
+    "express-validator": "^6.14.2",
+    "mssql": "^9.1.1",
+    "dotenv": "^16.0.3"
+  }
+}
