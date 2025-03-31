@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GCB App</title> <!-- Ruta relativa al CSS -->
-    <script type="module" crossorigin src="./dist/assets/index-BNyZKXN4.js"></script>
-    <link rel="stylesheet" crossorigin href="./dist/assets/index-CsiaEtcd.css">
+    <title>GCB App INDEX CLIENTE</title>
+    <link rel="stylesheet" href="./src/index.css" /> <!-- Ruta relativa al CSS -->
   </head>
   <body>
     <div id="root">
@@ -14,8 +13,9 @@
     <script>
       // Redirige automáticamente a la página principal al hacer clic en el botón
       document.getElementById('navigateButton').addEventListener('click', () => {
-        window.location.href = 'https://gcb-backend-b4f7ffamekdresdb.canadacentral-01.azurewebsites.net/api/usuarios';
+        window.location.href = '/usuarios'; // Ruta relativa para la página de usuarios
       });
-    </script> <!-- Ruta relativa al main.jsx -->
+    </script>
+    <script type="module" src="./src/main.jsx"></script> <!-- Ruta relativa al main.jsx -->
   </body>
 </html>

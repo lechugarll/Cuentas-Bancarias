@@ -8,3 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 );
+
+// Verifica que el servidor de desarrollo esté corriendo en el puerto 5173
+console.log('React app corriendo en el puerto 5173');
